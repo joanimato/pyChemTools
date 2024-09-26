@@ -1,0 +1,57 @@
+start 5w-mp2-prop
+
+title "5 water MP2/aug-cct properties"
+
+scratch_dir /people/mato166/scr
+permanent_dir /people/mato166/wat-shape/geom-opt/5w/5w-mp2
+
+memory total 4 gb
+
+geometry
+ O        -0.02328650    -0.00101706    -0.02134558
+ O        -0.96522543    -2.44934240    -0.95208176
+ O         1.05436637     2.39265009    -0.92976163
+ O        -1.04170454     2.42363557     0.89478478
+ O         1.00169326    -2.36837378     1.00741590
+end
+
+scf
+ direct
+ maxiter 150
+ vectors output 5w.movecs
+end
+
+
+mp2
+ freeze atomic
+end
+
+property
+ electrondensity
+ vectors 5w-mp2.mp2nos
+ mulliken
+end
+
+driver
+  maxiter 100
+  xyz 5w-b3lyp
+end
+
+basis
+  H library aug-cc-pvtz
+  O library aug-cc-pvtz
+end
+
+dplot
+ TITLE DENSITY
+LimitXYZ  
+ -3.0 3.0 10    
+ -3.0 3.0 10   
+ -3.0  3.0  10  
+ gaussian
+ spin total
+ output 5w.cube
+end
+
+task scf
+task dplot
