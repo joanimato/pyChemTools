@@ -5,8 +5,8 @@ from rdkit.Chem import Draw
 import pubchempy
 from io import BytesIO
 
-BOT_TOKEN = "MTI4ODkwODc0OTAwNzg4NDI4OA.GmTmL8.Mj7-JS6lDO_tex_7PnAhB1k0R6JkdjcXtYyAPY"
-CHANNEL_ID = 1288909652339331112
+BOT_TOKEN = "TOKEN HERE"
+CHANNEL_ID = "ID_HERE"
 
 
 # Set up the bot with a command prefix
