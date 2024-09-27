@@ -6,8 +6,8 @@ import pubchempy
 from io import BytesIO
 import requests 
 
-BOT_TOKEN = "MTI4ODkwODc0OTAwNzg4NDI4OA.G1qEOW.noWhQlb7i6qsIDrX7zJ2NcA7IIoVwjqcivHlPA"
-CHANNEL_ID = 1288909652339331112
+BOT_TOKEN = "TOKEN"
+CHANNEL_ID = 123
 
 
 # Set up the bot with a command prefix
